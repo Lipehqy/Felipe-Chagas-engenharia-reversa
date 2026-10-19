@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clientes - Oficina AutoCerta</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topo">
+    <div class="marca">Oficina AutoCerta</div>
+    <div class="usuario">
+        <span>Olá, <b id="nome-usuario">...</b></span>
+        <button id="btn-sair" class="secundario">Sair</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <a href="principal.html" class="voltar">&larr; Voltar ao painel principal</a>
+        <h2>Clientes</h2>
+
+        <div class="barra">
+            <input type="text" id="busca" placeholder="Buscar por nome, CPF, telefone ou e-mail...">
+            <button id="btn-buscar">Buscar</button>
+            <button id="btn-novo">+ Novo cliente</button>
+        </div>
+
+        <table>
+            <thead><tr><th>Nome</th><th>CPF</th><th>Telefone</th><th>E-mail</th><th>Ação</th></tr></thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="fundo-modal" id="modal">
+    <div class="modal">
+        <h3 id="modal-titulo">Novo cliente</h3>
+        <form id="form">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome">
+            <label for="cpf">CPF *</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone">
+            <label for="email">E-mail</label>
+            <input type="text" id="email">
+            <div class="modal-acoes">
+                <button type="button" class="secundario" id="btn-cancelar">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="aviso" id="aviso"></div>
+<script src="js/comum.js"></script>
+<script src="js/clientes.js"></script>
+</body>
+</html>

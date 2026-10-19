@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veículos - Oficina AutoCerta</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topo">
+    <div class="marca">Oficina AutoCerta</div>
+    <div class="usuario">
+        <span>Olá, <b id="nome-usuario">...</b></span>
+        <button id="btn-sair" class="secundario">Sair</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <a href="principal.html" class="voltar">&larr; Voltar ao painel principal</a>
+        <h2>Veículos</h2>
+        <div class="barra"><button id="btn-novo">+ Novo veículo</button></div>
+        <table>
+            <thead><tr><th>Placa</th><th>Modelo</th><th>Tipo</th><th>Marca</th><th>Cliente</th></tr></thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="fundo-modal" id="modal">
+    <div class="modal">
+        <h3>Novo veículo</h3>
+        <form id="form">
+            <label for="placa">Placa *</label>
+            <input type="text" id="placa" placeholder="ABC1D23" maxlength="8">
+            <label for="modelo">Modelo *</label>
+            <input type="text" id="modelo">
+            <label for="tipo">Tipo *</label>
+            <select id="tipo">
+                <option value="Carro">Carro</option>
+                <option value="Moto">Moto</option>
+                <option value="Utilitário">Utilitário</option>
+            </select>
+            <label for="marca">Marca</label>
+            <input type="text" id="marca">
+            <label for="cliente">Cliente *</label>
+            <select id="cliente"></select>
+            <div class="modal-acoes">
+                <button type="button" class="secundario" id="btn-cancelar">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="aviso" id="aviso"></div>
+<script src="js/comum.js"></script>
+<script src="js/veiculos.js"></script>
+</body>
+</html>

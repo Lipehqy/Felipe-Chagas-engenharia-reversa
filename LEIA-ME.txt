@@ -1,0 +1,11 @@
+COMO EXECUTAR (precisa do Node.js 22.13 ou superior (use "node -v" para conferir))
+
+    npm install
+    npm start
+
+Abra http://localhost:3000
+
+O banco (db/oficina_db.sqlite) é criado sozinho na primeira execução, a partir de db/oficina_db.sql.
+Para recriar o banco do zero: apague db/oficina_db.sqlite e rode npm start de novo.
+
+Logins de teste:  admin / admin123   ana.mecanica / ana123   carlos.recepcao / carlos123

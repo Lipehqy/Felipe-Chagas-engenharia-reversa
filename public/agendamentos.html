@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agendamentos - Oficina AutoCerta</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topo">
+    <div class="marca">Oficina AutoCerta</div>
+    <div class="usuario">
+        <span>Olá, <b id="nome-usuario">...</b></span>
+        <button id="btn-sair" class="secundario">Sair</button>
+    </div>
+</div>
+
+<div class="container larga">
+    <div class="card">
+        <a href="principal.html" class="voltar">&larr; Voltar ao painel principal</a>
+        <h2>Agendamentos</h2>
+        <div class="barra"><button id="btn-novo">+ Novo agendamento</button></div>
+        <div style="overflow-x:auto">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th><th>Serviço</th>
+                    <th>Placa</th><th>Modelo</th><th>Tipo</th><th>Marca</th>
+                    <th>Cliente</th><th>CPF</th><th>Telefone</th><th>E-mail</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+<!-- novo agendamento -->
+<div class="fundo-modal" id="modal-novo">
+    <div class="modal">
+        <h3>Novo agendamento</h3>
+        <form id="form-novo">
+            <label for="veiculo">Veículo *</label>
+            <select id="veiculo"></select>
+            <label for="data-novo">Data *</label>
+            <input type="date" id="data-novo">
+            <label for="servico">Serviço *</label>
+            <input type="text" id="servico">
+            <div class="modal-acoes">
+                <button type="button" class="secundario" id="cancelar-novo">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- alterar data -->
+<div class="fundo-modal" id="modal-data">
+    <div class="modal">
+        <h3>Alterar data do agendamento</h3>
+        <form id="form-data">
+            <label for="data-edit">Nova data *</label>
+            <input type="date" id="data-edit">
+            <div class="modal-acoes">
+                <button type="button" class="secundario" id="cancelar-data">Cancelar</button>
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="aviso" id="aviso"></div>
+<script src="js/comum.js"></script>
+<script src="js/agendamentos.js"></script>
+</body>
+</html>

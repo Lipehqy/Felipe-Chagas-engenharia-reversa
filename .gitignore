@@ -1,0 +1,5 @@
+node_modules/
+db/oficina_db.sqlite
+*.log
+.env
+.DS_Store

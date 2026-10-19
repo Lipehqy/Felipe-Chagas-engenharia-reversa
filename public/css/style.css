@@ -1,0 +1,166 @@
+:root {
+    --azul: #2b2d33;
+    --verde: #d9731a;
+    --verde-escuro: #b35c10;
+    --fundo: #f5f4f2;
+    --linha: #ddd8d2;
+    --texto: #1f2d33;
+    --erro: #b8362c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    line-height: 1.45;
+}
+
+h1, h2, h3 { margin: 0 0 12px; }
+
+/* ---------- Login ---------- */
+.login-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul);
+}
+.login-card {
+    background: #fff;
+    width: 340px;
+    padding: 34px 30px;
+    border-top: 6px solid var(--verde);
+    border-radius: 6px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.3);
+}
+.login-card h1 { font-size: 21px; margin-bottom: 4px; }
+.login-card .sub { margin: 0 0 20px; color: #667; font-size: 13px; }
+.login-card button { width: 100%; margin-top: 20px; }
+.dica { margin-top: 16px; font-size: 11px; color: #889; }
+
+/* ---------- Formulários ---------- */
+label { display: block; font-size: 12px; margin: 12px 0 4px; color: #455; }
+input, select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid var(--linha);
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+input:focus, select:focus { outline: 2px solid var(--verde); border-color: var(--verde); }
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: var(--verde);
+    color: #fff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+button:hover { background: var(--verde-escuro); }
+button.secundario {
+    background: transparent;
+    color: var(--azul);
+    border: 1px solid var(--linha);
+}
+button.secundario:hover { background: #eeeae5; }
+
+.erro-box {
+    display: none;
+    margin-top: 14px;
+    background: #fbeae7;
+    border-left: 4px solid var(--erro);
+    color: var(--erro);
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+/* ---------- Layout interno ---------- */
+.topo {
+    background: var(--azul);
+    color: #fff;
+    height: 56px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topo .marca { font-weight: 700; font-size: 17px; }
+.topo .usuario { display: flex; align-items: center; gap: 14px; font-size: 13px; }
+.topo button.secundario { color: #fff; border-color: rgba(255,255,255,.45); padding: 7px 14px; }
+.topo button.secundario:hover { background: rgba(255,255,255,.14); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 26px 24px 60px; }
+.container.larga { max-width: 1250px; }
+
+.card {
+    background: #fff;
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.voltar { display: inline-block; margin-bottom: 14px; font-size: 13px; font-weight: 600; color: var(--azul); text-decoration: none; }
+.voltar:hover { color: var(--verde); }
+
+.menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.menu a {
+    display: block;
+    background: #fff;
+    border: 1px solid var(--linha);
+    border-left: 5px solid var(--verde);
+    border-radius: 6px;
+    padding: 22px;
+    color: var(--texto);
+    text-decoration: none;
+}
+.menu a:hover { background: #fbf3ea; }
+.menu h3 { font-size: 16px; margin-bottom: 4px; }
+.menu p { margin: 0; font-size: 13px; color: #667; }
+
+.barra { display: flex; gap: 8px; margin-bottom: 14px; }
+.barra input { flex: 1; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--linha); }
+th { background: #efebe6; }
+tbody tr:hover td { background: #faf8f6; }
+td button { padding: 5px 10px; font-size: 12px; }
+.linha-mes td { background: #f6e3d0; font-weight: 700; color: var(--azul); }
+.vazio { text-align: center; color: #889; padding: 18px; }
+
+/* ---------- Modal e aviso ---------- */
+.fundo-modal {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(20,35,45,.55);
+    align-items: center; justify-content: center;
+}
+.modal {
+    background: #fff;
+    width: 420px; max-width: 92vw;
+    padding: 24px;
+    border-radius: 6px;
+    box-shadow: 0 20px 48px rgba(0,0,0,.35);
+}
+.modal-acoes { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
+
+.aviso {
+    position: fixed; bottom: 20px; right: 20px;
+    display: none;
+    max-width: 320px;
+    padding: 12px 18px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+.aviso.ok { background: var(--verde); }
+.aviso.erro { background: var(--erro); }
